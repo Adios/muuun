@@ -17,9 +17,7 @@ var	qs = require('querystring'),
 ap.listen(2000);
 
 io.sockets.on('connection', function (socket) {
-	socket.on('konbanmuuun', function () {
-		socket.emit('meta-muuun', message);
-	});
+	socket.emit('meta-muuun', message);
 });
 
 function server (req, response) {
